@@ -228,6 +228,13 @@ function config_shadowsocks(){
 
 }
 EOF
+
+    cat > /usr/local/shadowsocks/dns.conf<<-EOF
+{
+84.200.69.80
+84.200.70.40
+}
+EOF
 }
 
 # Install ShadowsocksR
