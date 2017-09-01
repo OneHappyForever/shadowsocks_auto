@@ -222,8 +222,8 @@ function config_shadowsocks(){
     "connect_verbose_info": 1,
     "redirect": "",
     "fast_open": false,
-    "workers": 1
-    "verbose": -3
+    "workers": 1,
+    "verbose": -3,
     "log-file": "/dev/null"
 
 }
