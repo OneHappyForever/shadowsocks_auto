@@ -224,6 +224,7 @@ function config_shadowsocks(){
     "fast_open": false,
     "workers": 1
     "verbose": -3
+    "log-file": "/dev/null"
 
 }
 EOF
