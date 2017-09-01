@@ -228,13 +228,6 @@ function config_shadowsocks(){
 
 }
 EOF
-
-    cat > /usr/local/shadowsocks/dns.conf<<-EOF
-{
-84.200.69.80
-84.200.70.40
-}
-EOF
 }
 
 # Install ShadowsocksR
@@ -259,6 +252,12 @@ function install_ss(){
         else
             update-rc.d -f shadowsocks defaults
         fi
+	#Add dns servers
+	cat > /usr/local/shadowsocks/dns.conf<<-EOF
+84.200.69.80
+84.200.70.40
+EOF
+		
         # Run ShadowsocksR in the background
         /etc/init.d/shadowsocks start
         clear
@@ -268,7 +267,7 @@ function install_ss(){
         echo -e "Server Port: \033[41;37m ${shadowsocksport} \033[0m"
         echo -e "Password: \033[41;37m ${shadowsockspwd} \033[0m"
         echo -e "Protocol: \033[41;37m auth_sha1_v4 \033[0m"
-        echo -e "obfs: \033[41;37m tls1.2_ticket_auth \033[0m"
+        echo -e "obfs: \033[41;37m http_simple \033[0m"
         echo -e "Encryption Method: \033[41;37m chacha20 \033[0m"
         echo "Welcome to visit:https://www.91yun.org/archives/2079"
         echo "If you want to change protocol & obfs, reference URL:"
