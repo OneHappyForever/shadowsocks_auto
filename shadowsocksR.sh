@@ -216,13 +216,14 @@ function config_shadowsocks(){
     "method": "chacha20",
     "protocol": "auth_sha1_v4_compatible",
     "protocol_param": "",
-    "obfs": "tls1.2_ticket_auth_compatible",
+    "obfs": "http_simple_compatible",
     "obfs_param": "",
     "dns_ipv6": false,
     "connect_verbose_info": 1,
     "redirect": "",
     "fast_open": false,
     "workers": 1
+    "verbose": -3
 
 }
 EOF
