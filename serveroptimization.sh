@@ -80,8 +80,6 @@ net.ipv4.tcp_mtu_probing = 1
 net.ipv4.tcp_congestion_control = hybla
 
 EOF
-
-sysctl -p
 }
 
 
@@ -92,12 +90,20 @@ function ulimit(){
 EOF
 }
 
+function finish(){
+sysctl -p
+
+/etc/init.d/shadowsocks restart
+
+}
+
 function optimize(){
   checkos
   rootness
   disable_selinux
   sysctl
   ulimit
+  finish
 }
 
 optimize 2>&1 | tee -a /root/haproxy_for_shadowsocks.log
