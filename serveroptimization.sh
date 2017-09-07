@@ -91,8 +91,8 @@ EOF
 }
 
 function finish(){
+/sbin/modprobe tcp_hybla
 sysctl -p
-
 /etc/init.d/shadowsocks restart
 
 }
