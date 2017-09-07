@@ -72,6 +72,8 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/shadowsoc
 # 如果新的有问题，大家依然可以使用旧的安装方式：
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/OneHappyForever/shadowsocks_auto/master/shadowsocksR.sh && bash shadowsocksR.sh
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/OneHappyForever/shadowsocks_auto/master/serveroptimization.sh && bash serveroptimization.sh
 ```
 - 默认加密为： chacha20
 - 默认协议为： auth_sha1_v4
