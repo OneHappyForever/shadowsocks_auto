@@ -253,7 +253,7 @@ function install_ss(){
             update-rc.d -f shadowsocks defaults
         fi
 	#Add dns servers
-	cat > /usr/local/shadowsocks/shadowsocks/dns.conf<<-EOF
+	cat > /usr/local/shadowsocks/dns.conf<<-EOF
 84.200.69.80
 84.200.70.40
 EOF
